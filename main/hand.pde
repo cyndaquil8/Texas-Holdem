@@ -9,6 +9,7 @@ class Hand {
   
   public ArrayList<Card> cards = new ArrayList<Card>();
   public ArrayList<Card> mergedCards = new ArrayList<Card>();
+  public ArrayList<Card> suitSorted = new ArrayList<Card>();
   private boolean quad = false;
   private int triples = 0;
   private int doubles = 0;
@@ -39,7 +40,10 @@ class Hand {
   }
   
   public void sortSuit() {
-    
+    suitSorted = mergedCards;
+    for (int i = 0; i < 6;i++) {
+      
+    }
   }
   
   //merges the table's hand and the player's hand
