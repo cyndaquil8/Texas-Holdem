@@ -39,10 +39,19 @@ class Hand {
     }
   }
   
+  //sorts cards in arraylist by suit
   public void sortSuit() {
     suitSorted = mergedCards;
-    for (int i = 0; i < 6;i++) {
-      
+    for (int i = 0; i < 6; i++) {
+      for (int k = 0; k < 6 - i; k++) {
+        Card temp1 = cards.get(k);
+        Card temp2 = cards.get(k + 1);
+        
+        if (temp1.getSuit() > temp2.getSuit()) {
+          cards.set(k, temp2);
+          cards.set(k + 1, temp1);
+        }
+      }
     }
   }
   
